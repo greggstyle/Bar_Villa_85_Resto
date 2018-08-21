@@ -1,0 +1,15 @@
+.container-direction {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 60%; /* aspect ratio */
+  position: relative;
+}
+
+.googlemap {
+  border: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
