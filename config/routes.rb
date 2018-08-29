@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'contact/index'
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'pages#home'
@@ -10,5 +11,7 @@ Rails.application.routes.draw do
   get 'restaurants/:id', to: 'restaurants#show',      as: :restaurant
 
   resources :restaurants
+
+resources :contact, only: [:index, :new, :create]
 
 end
