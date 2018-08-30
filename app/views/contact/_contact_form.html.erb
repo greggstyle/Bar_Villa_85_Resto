@@ -1,0 +1,24 @@
+<%= simple_form_for @contact, url: contact_index_path, remote: true do |f| %>
+<div class="form-inputs">
+  <%= f.label :prenom %></br>
+  <%= f.text_field  :name, required: true, class: "contact-form-text-area", placeholder: "Florian et vous?" %></br>
+
+  <%= f.label :email %></br>
+  <%= f.text_field :email, required: true, class: "contact-form-text-area", placeholder: "votre@email.com" %></br>
+
+  <%= f.label :message %></br>
+  <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area", placeholder: "Merci de nous laisser un message."%></br>
+
+  <div class= "hidden">
+    <%= f.label :nickname %>
+    <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+  </div>
+  <br>
+  <%= f.submit 'Envoi message', class: 'btn btn-primary' %>
+</div>
+<% end %>
+
+<div class="col-md-6" id="flash-message">
+  <%= render 'flash' %>
+</div>
+
