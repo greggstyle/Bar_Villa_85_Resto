@@ -8,4 +8,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
+  def contact
+  end
+
 end
