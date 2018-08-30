@@ -3,7 +3,7 @@ class ContactController < ApplicationController
     @contact = Contact.new(params[:contact])
   end
 
-def create
+  def create
     @contact = Contact.new(params[:contact])
     @contact.request = request
     respond_to do |format|
